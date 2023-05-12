@@ -10,23 +10,19 @@
     
                 @foreach ($trains as $train)
 
-                    @foreach ($train as $item)
-                        
-                    @dump($item)
                     <div class="card col-3 my-4 text-white" style="width: 18rem;">
                         <div class="card-body">
-                            <h4 class="card-title text-center">azienda: {{$item}}</h4>
-                            <h5 class="card-text">Stazione di Partenza: {{$item}}</h5>
-                            <h5 class="card-text">Stazione di Arrivo: {{$item}}</h5>
-                            <p class="card-text myText">Orario di partenza: {{$item}}</p>
-                            <p class="card-text myText">Orario di arrivo: {{$item}}</p>
-                            <p class="card-text myText">Numero Carrozze: {{$item}}</p>
-                            <p class="card-text myText">In Orario: {{$item}}</p>
-                            <p class="card-text myText">Cancellato: {{$item}}</p>
-                            <p class="card-text myText">Giorno Partenza: {{$item}}</p>
+                            <h4 class="card-title text-center">azienda: {{$train->azienda}}</h4>
+                            <h5 class="card-text">Stazione di Partenza: {{$train->stazione_partenza}}</h5>
+                            <h5 class="card-text">Stazione di Arrivo: {{$train->stazione_arrivo}}</h5>
+                            <p class="card-text myText">Orario di partenza: {{$train->orario_partenza}}</p>
+                            <p class="card-text myText">Orario di arrivo: {{$train->orario_arrivo}}</p>
+                            <p class="card-text myText">Numero Carrozze: {{$train->codice_treno}}</p>
+                            <p class="card-text myText">In Orario: {{$train->numero_carrozze}}</p>
+                            <p class="card-text myText">Cancellato: {{$train->in_orario}}</p>
+                            <p class="card-text myText">Giorno Partenza: {{$train->cancellato}}</p>
                         </div>
                     </div>
-                    @endforeach
                     
     
                 @endforeach
