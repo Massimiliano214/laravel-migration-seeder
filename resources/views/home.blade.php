@@ -10,7 +10,7 @@
     
                 @foreach ($trains as $train)
 
-                    <div class="card col-3 my-4 text-white" style="width: 18rem;">
+                    <div class="card col-3 my-4" style="width: 18rem;">
                         <div class="card-body">
                             <h4 class="card-title text-center">azienda: {{$train->azienda}}</h4>
                             <h5 class="card-text">Stazione di Partenza: {{$train->stazione_partenza}}</h5>
