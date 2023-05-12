@@ -17,7 +17,7 @@
                             <h5 class="card-text">Stazione di Arrivo: <br> {{$train->stazione_arrivo}}</h5>
                             <p class="card-text myText">Orario di partenza: {{$train->orario_partenza}}</p>
                             <p class="card-text myText">Orario di arrivo: {{$train->orario_arrivo}}</p>
-                            <p class="card-text myText">Codice Treno: if {{$train->codice_treno}}</p>
+                            <p class="card-text myText">Codice Treno: {{$train->codice_treno}}</p>
                             <p class="card-text myText">Numero Carrozze: {{$train->numero_carrozze}}</p>
                             <p class="card-text myText">In Orario:
                                 @if ($train->in_orario == 1)
