@@ -10,9 +10,9 @@ class PageController extends Controller
 {   
     public function index() {
 
-        $trains = Train::all();
+        $trains = Train::where('created_at', date('d-m-Y'));
 
-        dd($trains);
+        //dd($trains);
         return view('home', compact('trains'));
 
     }
