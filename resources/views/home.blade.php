@@ -3,7 +3,7 @@
 @section('title', 'train list')
 
 @section('content')
-    <div>
+    <div class="container">
         @foreach ($trains as $train)
            
             {{$train}}
