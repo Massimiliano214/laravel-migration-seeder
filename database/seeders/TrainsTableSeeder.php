@@ -73,7 +73,8 @@ class TrainsTableSeeder extends Seeder
                 $train->numero_carrozze = $row[6];
                 $train->in_orario = $row[7];
                 $train->cancellato = $row[8];
-                $train->created_at = $faker->date();
+                $date = \Carbon\Carbon::parse($row[4]);
+                $train->created_at = $date->format('Y-m-d');
 
                 $train->save();
 
