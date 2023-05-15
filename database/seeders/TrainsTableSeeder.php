@@ -58,11 +58,11 @@ class TrainsTableSeeder extends Seeder
 
         //csv
 
-        $csvList = Helpers::getCsvContent(__DIR__ . '/trains.csv');
+        $csvContent = Helpers::getCsvContent(__DIR__ . '/trains.csv');
 
-        foreach ($csvList as $index => $row) {
+        foreach ($csvContent as $index => $row) {
             if ($index > 0) {
-                $newTrain = new Train();
+                $train = new Train();
 
                 $train->azienda = $row[0];
                 $train->stazione_partenza = $row[1];
